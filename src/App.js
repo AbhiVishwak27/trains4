@@ -5,8 +5,8 @@ import About from './component/About'
 import { useState } from 'react';
 import{
   BrowserRouter as Router,
+  Routes, 
   Link, 
-  Switch, 
   Route
 } from 'react-router-dom'
 
@@ -26,16 +26,10 @@ function App() {
     <>
     <Router>
       <Navbar title="TextUtils" about="About TextUtils" mode={mode} handleMode={handleMode}/>
-      <Switch>
-        <Route path='/'>
-          <div className="container">
-            <TextForm title="Enter The Text For Analyzing" mode={mode}/>
-          </div>
-        </Route>
-        <Route path='/about'>
-          <About />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route exact path='/' element={<TextForm title="Enter The Text For Analyzing" mode={mode}/>}/>
+        <Route path='/about' element={<About/>}/>    
+      </Routes>
     </Router>
     </>
   );

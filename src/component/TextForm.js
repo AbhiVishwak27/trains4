@@ -54,17 +54,19 @@ export default function TextForm(props) {
 
     return (
         <>
-            <div className="mb-3">
+            <div className="mb-3 container">
                 <h1 className='my-3'>
                 <label htmlFor="myBox" className={`form-label text-${txtColor}`}>{props.title}</label>
                 </h1>
                 <textarea className={`form-control text-${txtColor} bg-${bgColor}`} placeholder="Enter The Text Here..." value={text} onChange={handleOnChange} id="myBox" rows="11"></textarea>
             </div>
-            <button className="btn btn-primary mx-1 my-1" onClick={handleUpChange}>Convert to Uppercase</button>
-            <button className="btn btn-primary mx-1 my-1" onClick={handleLowChange}>Convert to Lowercase</button>
-            <button className="btn btn-primary mx-1 my-1" onClick={handleCapChange}>Capitalize</button>
-            <button className="btn btn-danger mx-1 my-1" onClick={handleCopy}>Copy Text</button>
-            <button className="btn btn-danger mx-1 my-1" onClick={handleClearChange}>Clear Text</button>
+            <div className="container">
+                <button className="btn btn-primary mx-1 my-1" onClick={handleUpChange}>Convert to Uppercase</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={handleLowChange}>Convert to Lowercase</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={handleCapChange}>Capitalize</button>
+                <button className="btn btn-danger mx-1 my-1" onClick={handleCopy}>Copy Text</button>
+                <button className="btn btn-danger mx-1 my-1" onClick={handleClearChange}>Clear Text</button>
+            </div>
             <div className="container my-2">
                 <h1 className={`text-${txtColor}`}>Your Text Summary</h1>
                 <p className={`text-${txtColor}`}>{text.split(" ").length} Word, {text.length} characters</p>

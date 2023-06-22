@@ -22,8 +22,6 @@ export default function About(props) {
     else if (props.mode === 'dark'){
         txtColor = "light";
     }
-  
-    let bgColor = props.mode;
     return (
     <>
     <div className='container'>

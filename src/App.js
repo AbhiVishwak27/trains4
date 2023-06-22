@@ -28,6 +28,7 @@ function App() {
       <Navbar title="TextUtils" about="About TextUtils" mode={mode} handleMode={handleMode}/>
       <Routes>
         <Route exact path='/' element={<TextForm title="Enter The Text For Analyzing" mode={mode}/>}/>
+        <Route exact path='/index.html' element={<TextForm title="Enter The Text For Analyzing" mode={mode}/>}/>
         <Route path='/about' element={<About mode={mode}/>} />   
       </Routes>
     </Router>

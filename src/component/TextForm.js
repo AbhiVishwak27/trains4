@@ -68,7 +68,7 @@ export default function TextForm(props) {
                 <button className="btn btn-danger mx-1 my-1" onClick={handleClearChange}>Clear Text</button>
             </div>
             <div className="container my-2">
-                <h1 className={`text-${txtColor}`}>Your Text Summary</h1>
+                <h2 className={`text-${txtColor}`}>Your Text Summary</h2>
                 <p className={`text-${txtColor}`}>{text.split(" ").length} Word, {text.length} characters</p>
                 <p className={`text-${txtColor}`}>{0.008 * text.split(" ").length} Minutes to Read</p>
                 <h2 className={`text-${txtColor}`}>Preview</h2>
